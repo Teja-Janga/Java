@@ -1,0 +1,854 @@
+👉 Java Introduction:
+- Java is a High-Level Programming Language, Platform Independent(WORE-Write Once Read/Run Everywhere).
+- Java is a open source with millions of developers.
+- James Gosling at Sun Microsystems released in 1995.
+- Green Tea -> Oak -> Java (Java Logo is from the James's favourite coffee at Java cafe in Indonesia).
+
+👉 Where Java is Used:
+- Enterprise applications like servlets.
+- Mobile Apps by Android Studio 
+- Web Apps, Web servers, with servlets, Servlets.
+- Big Data pipeline with Hadoop & Spark.
+- Block Chain, IOT
+
+👉 Companies:
+Google, IBM, Netflix, Facebook, Cisco, AWS, TCS, Salesforce, NASA, Uber, Spotify etc...
+
+👉 Oracle bought the Java and owns it from 2010.
+
+👉 Comments in Java:
+- Single-Line Comments --> 2 Forward Slashes    " // "
+
+- Multi-Line Comments --> start with :
+								 /*
+								---Content of comment---
+								*/
+					
+
+👉 Java Variable:
+Datatype Variable_name = value;
+Example: 	int a = 10;
+			float b = 3.14;
+
+👉 Rules for creating a Variable:
+1. Variable name should be A-Z, a-z, 0-9, _, $
+2. Variable name should not start with a digit.
+3. Blank space or white space and also the special symbols are not allowed between variable name characters.
+4. Keywords cannot be used as a Variable name.
+5. Case Sensitive 
+6. Variable should always be on the LHS(Left Hand Side).
+
+
+1 Nibble = 4 Bits
+1 Byte = 8 Bits
+1 Kilo Byte = 1024 Bytes
+1 Mega Byte = 1024 KB
+1 Giga Byte = 1024 MB
+1 Tera Byte = 1024 GB
+1 Peta Byte = 1024 TB
+
+
+👉 Variables Types:
+
+1️⃣. Primitive
+i. Numeric
+	a. integer
+	b. float (decimal)
+ii. Non-Numeric
+	a. character
+	b. Boolean 
+
+2️⃣. Non-Primitive
+i. string
+ii. class
+iii. interface
+iv. array
+v. collections
+
+👉 Integer Datatype:
+Byte ---> 1 byte ----> Default --> 0 : -128     to    127
+Short --> 2 bytes --> Default --> 0 : -32768  to   32767
+int ------> 4 bytes --> Default --> 0 : -2147483648    to   2147483647
+long ---> 8 bytes ---> Default --> 0 : -9223372036854775808  to 9223372036854775807
+
+👉Float Datatype:
+Note: 0.0 is default value 
+float -----> 4 bytes --> 0.0f : 6 to 7 Decimal Digits (Single Precision)
+double --> 8 bytes --> 0.0d 15 to 16 Decimal Digits (Double Precision) [For Scientific Calculations]
+Eg: float a = 3.144f;
+       double b = 3.1444d
+
+👉Char Datatype:
+char --> 2 bytes --> 140000
+ASCII - American Standard Code for Information Interchange
+
+👉Boolean Datatype: (Takes 1 bit)
+ True --> Default --> False or Null
+False
+
+👉String Datatype:
+Default Value: Null
+
+To check size in bits:  Datatype.SIZE
+Byte.MIN_VALUE --> -127
+Byte.MAX_VALUE --> 128 
+
+
+👉Java Type Conversion:
+1. Widening Conversion (Automatically) --> No loss of Data (or) Implicit Conversion.
+2. Narrowing Conversion (Manually)-------> Loss of Data (or) Explicit Conversion.
+
+i. Byte --> Short --> Int --> Long --> Float --> Double (Small to Big) Automatic Coversion.
+ii. Double --> Float --> Long --> Int --> Short --> Byte (Big to Small)  Manual Conversion.
+
+👉NOTE:
+Char to Number cannot be converted.
+
+👉Java Operators:
+1. Arithmatic Operators --->  { +, -, *, /, % }
+2. Assignment Operators -->  { =, +=, -=, *= }
+3. Relational Operators---->  { ==, >, <, >=, <= }
+4. Logical Operators ------->  { &&, ||, ! }
+5. Unary Operators -------->  { +, -, ++, -- }
+6. Bitwise Operators------->  { &, |, ^, ~, >>, <<, >>> }  [XOR=^, NOT=~, >>=Right Shift, <<=Left Shift]  
+7. Ternary Operators ------>  { ?, : }   [ Condition ?  if true : if false ]  
+
+Expression:  Operand    <space>    Operator    <space>    Operand
+	       Eg: a + b ==> "a", "b" are Operand  and "+" is Operator.
+
+👉Control Statements:
+
+1. Decision/Condition Making
+	i. If Statement
+		a. if
+		b. if else
+		c. nested if
+		d. if else if
+	ii. Switch Statement.
+
+2. Looping 
+	i. while
+	ii. Dowhile
+	iii. for
+
+3. Jumping
+	i. break
+	ii. continue
+	iii. return
+
+Eg:
+👉 IF Statement:
+	if(condition)
+	{
+		//statement
+	}	
+
+👉IF-ELSE Statement:
+	if(condition)
+	{
+		//statement
+	}	
+	else
+	{
+	//statement
+	}
+
+
+👉NESTED-IF Statement:
+
+	if(condition-1)
+	{
+		//statement-1
+
+		if(condition-2)
+		{
+			//statement-2
+		}
+	}
+	else
+	{
+		//statement
+	}
+
+👉IF-ELSE-IF Statement:
+	
+	if(condition)
+	{
+		//statement
+	}
+	else if(condition)
+	{
+		//statement
+	}
+	else
+	{
+	//statement
+	}
+
+
+👉SWITCH-CASE:
+	switch(Expression)
+	{
+	case 1:
+		break;
+	case 2:
+		break;
+	default;
+	}
+
+👉 FOR LOOP:
+	for(initialization;condition;updation)
+	{
+		//Body Content of the Loop
+	}
+
+👉 Example on FOR LOOP:
+	for(int i = 1; i<10; i++)
+	{
+		//content
+	} 
+
+👉 WHILE LOOP:
+	while(condition)
+	{
+		//Content
+	}
+
+👉DO-WHILE LOOP:
+
+	do
+	{
+		//Content
+	} while(condition);
+
+
+			👉ARRAYS	IN	JAVA:
+- Allows us to store multiple values if same datatype in a single variable.
+- We use square braces to define the variable and declare the array  " [ ] ".
+
+👉Types of ARRAYS:
+1. Single Dimensional Array    ------>  DataType[ ] Variable_Name;
+2. 2 Dimensional Array  -------------> DataType[ ][ ] Variable_Name;
+3. 3d/ Multi-Dimensional Array   --> DataType[ ][ ][ ] Variable_Name;
+
+👉NOTE:
+- Array is allocated through Contiguous Memory Allocation in the memory.
+- For Fast Execution.
+- All Arrays are allocated dynamically.
+
+👉SDA:
+Ex:  String[ ] Dishes = {"biryani", "curd_rice", "dal_rice"};
+					0			1		   2
+
+-To get string called " curd_rice " i will access it through array  -->  Dishes[1]
+-To find length of array  -->  (Variable_name.length)
+
+👉2DA:
+					 Col 0	 Col 1	 Col 2		Eg:		Col1		Col2		Col3
+
+			Row 0	x[0][0]	x[0][1]	x[0][2]		Row1	   1		   2		   3
+
+			Row 1	x[1][0]	x[1][1]	x[1][2]		Row2	   4		   5		   6
+
+			Row 2	x[2][0]	x[2][1]	x[2][2]		Row3	   7		   8		   9
+
+		👉STRINGS in JAVA:
+- String can store the sequence of characters enclosed by double quotes.
+-String is IMMUTABLE..
+- Strings stored in a special memory area called "String Constant Pool".
+==>  String A = "Hyderabad";
+==> Char[ ] ch = {'H', 'y', 'd', 'e', 'r', 'a', 'b', 'a', 'd'};
+				(or)
+==> String A = new String{"Hyderabad");
+
+👉String Operators:
+1. equals():
+	Comparing 2 strings whether they are same or not with boolean datatype.
+
+2. replace()
+	We can replace string or character from the given string using method "replace()".
+
+3. length()
+	inding the length of string using "length()" method...
+
+4. concat()
+	Joining 2 string using "concat()" method.
+
+5. contains():
+	To check whether the required string or character is present in the give string or not.
+
+5. toLowerCase():
+	We can change characters from upper to lowercase using "toLwerCase()" method.
+
+6. trim():
+	We can remove whitespaces in a string at starting and ending places of that string using the method "trim()".
+
+7. isEmpty():
+	To check whether the given string is empty or not.
+Note: Even the WHITESPACE is considered as a character in the string..
+
+
+		👉FUNCTIONS in JAVA👈
+
+- A block of code to perform a task.
+- Used for good structure and have a benifit of code reusability.
+- The Function will run after the function call.
+
+👉Syntax of a Function in Java:
+
+	Datatype Function_Name( ) {
+			/*
+			 * Body of the content....
+			*/
+		}
+
+👉Example:
+
+	int addition(int a, int b) {					[ " a", " b " are called parameters]
+											[10, 20 are arguments]
+			/*Body of the Function*/
+			int sum;				
+			sum = a+b;
+			return sum;
+		}
+	addition(10, 20);						[" addition(10,20) " is Function Call]
+
+👉Note: 
+- The first line in the function " int addition(int a, int b){ " is called FUNCTION DEFINITION"
+- Variable inside the FUNCTION DEFINITION are called PARAMETERS.
+- Variable inside the FUNCTION CALL are called ARGUMENTS.
+
+	
+	👉OBJECT ORIENTED PROGRAMMING (OOPs) in JAVA👈 
+
+- OOPs is used as it is faster, easier to execute.
+- OOPs provides clear structure.
+- Don't Repeat Yourself (DRY).
+- OOPs makes it possible to create full reusable applications with less code and shorter development time.
+
+👉PILLARS of OOPs:
+1. class
+2. Object
+3. Encapsulation
+4. Polymorphism
+5. Inheritance
+6. Data abstraction 
+
+👉1. CLASS:
+- A class is like a blueprint of an object (like a blueprint for building a home or anything).
+- No memory is allocated when CLASS is created.
+- a CLASS can be declared for only once.
+- A group of similar objects is class 
+[Eg: "Veggies" is CLASS and particularly "tomato", "chillies", "potato" or "onion" or objects are OBJECTS of that CLASS. Here GROUP OF all Veggies is class and particularly every vegetable is an OBJECT]
+
+👉2. OBJECT:
+- The physical entity that is created with  the blueprint called CLASS.
+- Memory is allocated when object is declared.
+- Object can be created multiple times.
+
+
+👉Syntax for a CLASS and OBJECT:
+
+# CLASS
+
+	Class Class_Name 
+		{
+			Data Members; 	[ Variable inside a class can be called as Data Members]
+			Methods;		[ Function inside a class is called METHOD]
+			Constructor;
+		}	
+
+# OBJECT:
+
+	Class_Name <space> Object_Name = new Constructor();
+
+NOTE: 
+	- Constructor and ClassName will be same.
+					
+Ex:   Car obj = new Car();		[Constructor is used to initialize the object]
+
+- Intialization means declaring a variable and giving an initial value before it is used. 
+Eg : 
+     int a;			[Declaration: Tells the compiler that "this thing exists".]
+     int a = 10;		[Definition: Tells the compiler that this thing exists and here is it's actual value]
+
+ 👉Syntax:
+
+      public class ClassName {
+
+           Fields (Variables) 
+           Datatype FieldName;
+      
+           	/* Constructor */
+      		public ClassName() {
+           		/* Initialization of Code*/
+          		 }
+      
+          		 /* Methods (behaviours) */
+      			public void MethodName() {
+          			 /* Body of Method */
+           			}
+      }
+     
+👉 INHERITANCE:
+
+Parent Class	 (or) 	Super Class	 (or) 	Base Class
+	⬇️					⬇️				      ⬇️
+	⬇️					⬇️				      ⬇️
+	⬇️					⬇️				      ⬇️
+Child Class	 (or) 	  Sub Class 	 (or) 	Derived Class
+
+1. Single Inheritance
+- 1 base class and 1 derived class
+ 
+2. MultiLevel Inheritance
+- 1 base class, 1 intermediate class and 1 derived class
+
+3. Hierarichal Inheritance
+ - 1 base class with multiple derived classes
+
+4. Multiple Inheritance
+- Multiple base classes with single derived class
+
+5. Hybrid Inheritance
+- Adding multiple types of inheritances to form a new one.
+
+ ADVANTAGES:
+- Code Reusability
+- Class Hierarchy
+
+👉 JAVA CONSTRUCTOR:
+
+- CONSTRUCTOR is a special method which can be called automatically when Object created.
+- Constructor_Name and Class_Name should be same.
+- Constructor is also a method but it doesn't return any value like a regular Method return.
+- Constructor can be called only once and will be executed when object is created but a regular method can be called multiple number of times.
+
+- A java constructor cannot be abstract, static, final, synchronized.
+
+👉Types:
+
+1. Default Constructor.			(No-Argument Constructor)
+2. Parameterized Constructor.
+3. Copy Constructor 
+
+Syntax:
+
+class ClassName {
+
+	/* CONSTRUCTOR */
+
+}
+
+👉Example:
+
+class Hi {
+
+	Hi() {	/* Constructor */
+
+	}
+}
+
+Hi obj = new Hi();
+
+1. Default Constructor:
+
+- If there's no Constructor in a class compiler will automatically creates a default constructor.
+
+👉 COPY CONSTRUCTOR: 
+
+- In a class when there is a constructor that appears multiple times with similar parameters.
+- So their will be a confusion and overloading occurs about which constructor should be executed.
+- To solve this conflict we add new parameters or change the datatype of the parameters, so that they will get different and no conflict/ overloading will be there.. 
+
+
+👉 " This " Keyword:
+
+- " This " is a keyword.	(Reference Variable)
+- We use this Keyword to invoke the Current Class Method and also the Current Class Variable.
+- To pass the current Object as a parameter for the Constructor.
+- To refer the current class instance variables.
+- To differ the Local Variables from the Global Variables 
+
+👉 SYNTAX:
+
+		this.data_member;
+		this.method();
+
+- We use this keyword for code clarity.
+- To Remove Constructor Overloading.
+- Need limited use of "this" keyword as it makes harder to read.
+
+👉POLYMORPHISM:
+Poly = many
+Morph = forms 	from greek 
+
+1. Compile Time --> Method Overloading
+2. RunTime ---------> Method OverRiding 
+
+👉 JAVA ENCAPSULATION:	In-Capsule-Action
+
+- Wrapping the data(Variables) and code acting on data(methods) together single unit.
+
+
+👉 ENCASULATION Diagramatic Explanation:
+
+				   CLASS
+		 _________________________
+		|			|			  |
+		|   Methods	|    Variables	  |
+		|___________|____________|
+
+👉ACCESS MODIFIERS:
+
+1. Default 
+- When no access specifier is written for class or method or data member, it is said to be having DEFAULT access modifier bydefault. It has mild restriction like data can be accessed only through few packages.
+
+2. Public 
+- Anywhere the data/methods can be accessed when class or method or data member is mentioned with the access specifier "PUBLIC".
+
+3. Private
+- No one can access the data or variables or methods or anything when the class or method or data member is mentioned with the access specifier "PRIVATE".
+	
+4. Protected		
+- When class or method or data members are mentioned with the access specifier "PROTECTED" the data can only be accessed through same package and from subclasses. 
+
+👉 DATA ABSTRACTION:
+- It is the process of hiding certain details and showing only essential info to the user.
+- Abstraction can be achieved with either Abstract Classes or Abstract Interfaces. 
+- Abstract class is a restricted class that cannot be used to create object (to access it, it must be inherited from another class).
+- Abstract method can only be used in Abstract Class, it does not have a body. The body is provided by the subclass (Inherited from).
+
+
+STATIC and FINAL keyword:
+
+👉STATIC:
+- Normally when we are writing a METHOD inside a CLASS, we should create an OBJECT for that CLASS to call the METHOD inside the CLASS for which we have created the OBJECT.
+- But if we use " static " keyword before defining the method we don't need to create an object for the class in which we defined the method. we can directly call the method.
+- This " static " keyword is used for memory management.
+
+👉FINAL:
+- This " final " keyword is used to declare constants, prevents  Method Overriding and restrict Inheritance.
+- USAGE: 
+1. final Variable: Once variable is created with final keyword we cannot change value of the variable. 
+2. final Method: Can not be overridden in subclass
+3. final Class: Can not be subclass (Prevents from Inheritance).
+
+👉LOCAL VARIABLE:
+- Declared inside body of the method.
+- Can not define with static keyword.
+- Existance of the local variable of that method is not know to the other methods .
+- After execution of that method local variable inside that method get destroyed or simply it's work is done there.
+
+Syntax: 
+class ClassName {
+	p s v m() {
+		int i;			// Here Variables i , j are local variables.
+		String n;
+		}
+	}
+
+👉 INSTANCE VARIABLE:
+- Declared inside the class but otside of the Method Body.
+- Accessed using Object_Name.
+- We can use Access Modifiers for these Instance variables. 
+Syntax:
+	class ClassName {
+		int i = 10;		//Here variable " i " is INSTANCE VARIABLE.
+		public void MethodName() {
+		
+			}
+	}
+
+
+- STATIC VARIABLE:
+- To create STATIC VARIABLE insert keyword "static" before the definition of variable.
+-  Within a Class or outside of any Method or Constructor or a block wherever you can create Static Variable.
+- Accessed using the ClassName
+Syntax:
+	public class ClassName {
+			static int i = 100;
+		}
+
+👉EXCEPTION HANDLING in JAVA:
+
+- Simply handling of Error is Exception Handling.
+
+👉Types of Errors:
+
+1. RunTime Error (Unchecked Execption).
+	Examples of RunTime Errors:   n/0 or null pointers
+- JVM is involved in handling this RunTime Errors.
+
+2. Compile Time Error  (Checked Exception).
+     Examples of Compile Time Errors :	   Syntax/Type Errors, Missing Semicolon. 
+- Javac is involved in handling this Compile Time Errors
+
+
+👉Types of Handlers:
+
+1. Try    
+- Allows block of code to test
+
+2. Catch
+- Handle exceptions from "try".
+
+3. Throw
+- Can through one exception at once in this "Throw" block.
+
+4. Throws
+- Can through multiple Exceptions.
+
+5. Finally
+- Execute any time.
+
+
+try-catch Syntax:
+class className {
+	void methodName() {
+	try {
+		// content
+	}
+	catch(ExceptionName) {
+		//content
+		}
+	}
+}
+
+
+- We need to add " throw " block inside of the method.
+- But we have to add " throws " next to the method definition.
+
+- throw Syntax:
+ class classname {
+	public void methodName() {
+		throw ExceptionName();
+		}
+	}
+
+
+- throws Syntax:
+class className {
+public void methodName( ) throws ExceptionName {
+		// body 
+
+		}
+	}
+
+--------------------------------------------------------------------------------------------------------------------------------------
+				👉 JDBC (Java DataBase Connectivity): 👈
+--------------------------------------------------------------------------------------------------------------------------------------
+- It is an API (Application Program Interface) that allows Java Programs to connect to and interact with DataBases like:
+1. MySQL
+2. Oracle
+3. PostgreSQL
+4. SQLite
+5. MS SQL Server
+
+- Think of JDBC as the bridge between Java and our database — so we Java code can:
+> Insert
+> Read
+> Update
+> Delete
+- Data stores in tables.
+
+
+👉 JDBC Workflow Overview (The 5 Key Steps):
+
+--------------------------------------------------------------------------------------------------------------------------------------
+	STEP										|		DESCRIPTION
+--------------------------------------------------------------------------------|----------------------------------------------------
+1. Load Driver	 (Class.forName)						|	Load the JDBC driver class.
+												|
+2. Create Conection (DriverManager.getConnection)		|	Connect to our DataBase using 													|	URL, username and password.
+												|
+3. Create Statement (createStatement)				|	Create SQL Statements (like 													|	SELECT, INSERT etc.)
+												|
+4. Exequte Query (executeQuery())					|	Run the SQL and get result.
+												|
+ Reads each row of data (rs.next())					|
+												|
+5. Close (close())									|	Close the connection to clean up 												|		resources.
+--------------------------------------------------------------------------------------------------------------------------------------
+
+👉 What is a JDBC Driver?
+
+- A JDBC Driver is a software component that allows Java applications to connect to a specific database.
+Think of it like a translator between:
+> Our Java code
+> And the database engine (like MySQL, Oracle, PostgreSQL, etc.)
+
+- Java doesn’t natively understand how to talk to different databases — so each database vendor provides its own JDBC driver to make this communication possible.
+
+👉 Without a driver, your Java program has no idea how to:
+> Connect to the DB
+> Send SQL commands
+> Fetch results
+- So, a JDBC driver is mandatory if you want your app to talk to a database.
+
+👉 The JDBC Driver Type we use is " Thin Driver "
+- It's pure Java driver that talks directly to DB
+- Most widely used.
+
+👉 It’s called the Thin Driver because:
+- It's pure Java (no native code)
+- Lightweight and easy to use
+- Platform-independent
+
+👉 For MySQL, we will use this driver:		"  mysql-connector-j.jar  "
+
+👉 We will import it into our project and it provides the class:	" com.mysql.cj.jdbc.Driver "
+
+👉Here’s how it fits into your code:
+
+Class.forName("com.mysql.cj.jdbc.Driver"); 		// Load driver
+
+Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "password"); 			// Use it to connect
+
+
+
+👉 JDBC Code Skeleton:
+
+import java.sql.*;
+
+public class JDBCExample {
+    public static void main(String[ ] args) {
+        try {
+            // 1. Load the JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // 2. Establish connection
+            Connection conn = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/your_database", "username", "password");
+
+            // 3. Create a statement
+            Statement stmt = conn.createStatement();
+
+            // 4. Execute a query
+            ResultSet rs = stmt.executeQuery("SELECT * FROM your_table");
+
+            while (rs.next()) {
+                System.out.println("Column 1: " + rs.getString(1));
+            }
+
+            // 5. Close everything
+            rs.close();
+            stmt.close();
+            conn.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+🪜Step-by-Step Explanation:
+
+▫️import java.sql.*;
+ 
+- Imports all JDBC related classes like
+> Connection
+> Statement
+> ResultSet
+> DriverManager
+--------------------------------------------------------------------------------------------------------------------------------------
+▫️ Class.forName("com.mysql.cj.jdbc.Driver");
+
+Step 1: Load the JDBC Driver
+- This loads the MySQL JDBC driver class into the memory.
+- It registers the driver with the DriverManager.
+
+ 💡 Think of it as:
+- | “Hey Java, I’ll be talking to a MySQL database — get the driver ready.” |
+ 📌"  com.mysql.cj.jdbc.Driver " is the class inside " mysql-connector-j.jar " .
+--------------------------------------------------------------------------------------------------------------------------------------
+▫️ Connection conn = DriverManager.getConnection(...)
+
+Step 2: Establish a Connection:
+- This line opens a connection to your DataBase.
+
+	▫️	"jdbc:mysql://localhost:3306/your_database"
+	  - URL Breakdown:
+	> jdbc:mysql://	-->	protocol and DB type
+	> localhost 		-->	server location (our own PC)
+	> 3306			-->	Default port number for MySQL
+	> your_database	-->	Replace with our actual DB name
+	> "username", "password"	-->	DB login credentials (usually "root", "our_password")
+--------------------------------------------------------------------------------------------------------------------------------------
+▫️Statement stmt = conn.createStatement();
+Step 3: Create SQL Statement Object:
+- This creates a Statement Object to run SQL quries.
+👉 You can now say things like:
+
+	stmt.executeQuery("SELECT ...");
+	stmt.executeUpdate("INSERT ...");
+--------------------------------------------------------------------------------------------------------------------------------------
+▫️ResultSet rs = stmt.executeQuery("SELECT * FROM our_table");
+Step 4: Execute SQL Query:
+> " SELECT * FROM our_table"	-->	This is the SQL statement.
+> It fetches all records from a table.
+> " executeQuery() " is used specifically for SELECT operations.
+> Returns a " ResultSet " object(like a virtual table).
+--------------------------------------------------------------------------------------------------------------------------------------
+▫️ while (rs.next()) { ... }
+- Now we are reading the data from the result.
+>  rs.next() → moves to the next row in the table (returns false when there’s no more).
+			" System.out.println("Column 1: " + rs.getString(1)); "
+
+- Gets value from column 1 (first column in that row).
+> We can also use:		" rs.getString("column_name"); "		// safer & readable 
+--------------------------------------------------------------------------------------------------------------------------------------
+▫️  rs.close(); 
+	stmt.close();
+	conn.close();
+
+- Always important to:
+> Close the ResultSet 
+> Close the Statement 
+> Close the Connection.
+
+- This prevents memory leaks.
+--------------------------------------------------------------------------------------------------------------------------------------
+▫️ catch (Exception e) { 
+		e.printStackTrace(); 
+		}
+- Catches any exceptions during:
+> Driver loading
+> Connection
+> Query execution
+
+- " e.printStackTrace() "  helps you debug if anything fails (like wrong credentials, DB not found, etc.)
+________________________________________________________________________________
+
+Overall Flow Recap:
+
+Step										What it does
+
+1. Class.forName							Loads MySQL Driver
+
+2. DriverManager.getConnection				Opens connection to DB
+
+3. createStatement()						Prepares SQL Command
+
+4. executeQuery()							Sends command to DB and recieves data
+
+5. rs.next()								Reads each row of data.
+
+6. close()									Cleans up
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
